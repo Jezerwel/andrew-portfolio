@@ -53,7 +53,7 @@ export const clientTransformations: ClientTransformation[] = [
     stats: {
       weightChange: "-35 lbs",
     },
-    goal: "Weight Loss",
+    goal: "Weight Loss Transformation",
     testimonial:
       "Life-changing transformation. Could not have done it without Andrew!",
     program: "Training + Nutrition Plan",

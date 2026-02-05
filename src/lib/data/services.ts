@@ -2,81 +2,55 @@ import type { Service } from "@/lib/types";
 
 export const services: Service[] = [
   {
-    id: "one-on-one",
-    title: "One-on-One Training",
+    id: "lifestyle-coaching",
+    title: "Lifestyle Coaching",
     description:
-      "Personalized training sessions tailored to your specific goals, fitness level, and schedule. Get the attention and expertise you deserve.",
+      "For those who want to get lean, build muscle, and look better. Custom training and nutrition plans built around your schedule and goals.",
     features: [
-      "Tailored exercise selection",
-      "Progressive overload programming",
-      "Form coaching and technique",
-      "Training program adjustments",
+      "Personalized training program",
+      "Custom nutrition plan",
+      "Weekly check-ins",
+      "Form corrections",
     ],
-    icon: "🏋️",
+    icon: "01",
   },
   {
-    id: "nutrition",
-    title: "Nutrition Coaching",
+    id: "competition-prep",
+    title: "Competition Prep",
     description:
-      "Custom meal plans and nutritional guidance to fuel your body properly and maximize your results both in and out of the gym.",
+      "Stage-ready physiques. Peak week protocols. Posing guidance. For bodybuilding, physique, and bikini competitors who want to place.",
     features: [
-      "Customized meal plans",
-      "Macro and calorie guidance",
-      "Flexible dieting approach",
-      "Ongoing nutritional support",
+      "Contest prep programming",
+      "Peak week strategy",
+      "Posing coaching",
+      "Show day support",
     ],
-    icon: "🥗",
+    icon: "02",
   },
   {
-    id: "online",
-    title: "Online Training",
+    id: "online-coaching",
+    title: "Online Coaching",
     description:
-      "Can't make it to the gym? No problem. Get professional guidance with custom workout plans and video check-ins",
+      "Same proven methods, delivered remotely. Full training and nutrition programming with video check-ins and direct access.",
     features: [
-      "Remote coaching",
+      "Remote programming",
       "Video form checks",
-      "Weekly progress reviews",
-      "Flexible scheduling",
+      "Direct messaging support",
+      "Weekly adjustments",
     ],
-    icon: "📱",
+    icon: "03",
   },
   {
-    id: "group",
-    title: "Group Sessions",
+    id: "nutrition-only",
+    title: "Nutrition Only",
     description:
-      "Train with friends and stay motivated in small group settings. Perfect for teams or workout buddies looking to stay accountable.",
+      "Already training but need help with diet? Get a custom meal plan and macro guidance to finally see the results you've been missing.",
     features: [
-      "Small group training",
-      "Shared accountability",
-      "Fun atmosphere",
-      "Cost-effective option",
+      "Custom meal plan",
+      "Macro calculations",
+      "Food flexibility",
+      "Ongoing adjustments",
     ],
-    icon: "👥",
-  },
-  {
-    id: "goal-tracking",
-    title: "Goal Setting & Tracking",
-    description:
-      "Set realistic goals and track your progress with regular assessments, measurements, and performance evaluations.",
-    features: [
-      "Goal setting strategies",
-      "Progress measurements",
-      "Performance tracking",
-      "Regular evaluations",
-    ],
-    icon: "🎯",
-  },
-  {
-    id: "transformation",
-    title: "Body Transformation",
-    description:
-      "Complete transformation programs combining strength training, cardio, nutrition, and lifestyle coaching for dramatic results.",
-    features: [
-      "Full program design",
-      "Nutrition planning",
-      "Lifestyle coaching",
-      "Ongoing support",
-    ],
-    icon: "🔥",
+    icon: "04",
   },
 ];

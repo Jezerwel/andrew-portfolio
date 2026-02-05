@@ -27,6 +27,7 @@ export interface SiteConfig {
   title: string;
   description: string;
   tagline: string;
+  url?: string;
   social: {
     instagram?: string;
     facebook?: string;
