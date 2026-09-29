@@ -31,7 +31,7 @@ export const ContactSection = () => {
               </svg>
             </div>
             <p className="text-sm text-muted-foreground mb-1 uppercase tracking-wide font-medium">
-              @drewliftz
+              @drewliftz1
             </p>
           </div>
           <Button

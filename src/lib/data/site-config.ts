@@ -8,7 +8,7 @@ export const siteConfig: SiteConfig = {
   tagline: "No Shortcuts. Just Results.",
   url: "https://builtbydrew.com",
   social: {
-    instagram: "https://www.instagram.com/drewliftz/",
+    instagram: "https://www.instagram.com/drewliftz1/",
     facebook: "https://www.facebook.com/drewtzybtw",
     email: "andrewvinzg@gmail.com",
     phone: "09202634088",

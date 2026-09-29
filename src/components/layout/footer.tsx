@@ -98,7 +98,7 @@ export const Footer = () => {
                     rel="noopener noreferrer"
                     className="text-foreground/70 hover:text-primary transition-colors"
                   >
-                    @drewliftz
+                    @drewliftz1
                   </a>
                 </li>
               )}
