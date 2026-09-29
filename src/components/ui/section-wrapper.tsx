@@ -12,8 +12,11 @@ export const SectionWrapper = ({
   className,
 }: SectionWrapperProps) => {
   return (
-    <section id={id} className={cn("py-20 px-4 md:px-8 w-full", className)}>
-      <div className="max-w-7xl mx-auto">{children}</div>
+    <section
+      id={id}
+      className={cn("scroll-mt-24 w-full px-5 py-20 sm:px-8 md:py-24 lg:py-28", className)}
+    >
+      <div className="mx-auto max-w-7xl">{children}</div>
     </section>
   );
 };

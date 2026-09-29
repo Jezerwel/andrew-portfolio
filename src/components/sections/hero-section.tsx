@@ -15,7 +15,7 @@ export const HeroSection = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "auto" });
     }
   };
 
@@ -26,30 +26,30 @@ export const HeroSection = () => {
   return (
     <section className="relative h-screen w-full flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 z-0">
-        <Image
-          src="/andrew-coach.jpg"
-          alt="Andrew Vinz Ganon - Fitness Coach and Body Transformation Specialist"
-          fill
-          className="object-cover brightness-[0.25] contrast-[1.1]"
-          priority
-          sizes="100vw"
-          placeholder="blur"
-          blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAMCAgMCAgMDAwMEAwMEBQgFBQQEBQoHBwYIDAoMCwsKCwsNDhIQDQ4RDgsLEBYQERMUFRUVDA8XGBYUGBIUFRT/2wBDAQMEBAUEBQkFBQkUDQsNFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBQUFBT/wAARCAAIAAoDASIAAhEBAxEB/8QAFgABAQEAAAAAAAAAAAAAAAAAAAYH/8QAIhAAAQQBBAMBAAAAAAAAAAAAAQIDBBEABQYSITFBUWH/xAAVAQEBAAAAAAAAAAAAAAAAAAADBP/EABsRAAICAwEAAAAAAAAAAAAAAAECABEDITFB/9oADAMBAAIRAxEAPwC5Pue7YGo7i0lrUNMeYjyFsOJW2hTqFcVAEAgEV2D3n0xjFKxbFlQvTP/Z"
-        />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/95" />
-        <div className="absolute inset-0 hero-gradient animate-gradient opacity-60" />
+        <div className="absolute inset-y-0 left-0 w-[130%]">
+          <Image
+            src="/andrew-monochrome.jpg"
+            alt="Andrew posing in a monochrome gym portrait"
+            fill
+            className="object-cover object-[center_58%] brightness-[0.45] contrast-[1.1]"
+            priority
+            sizes="130vw"
+          />
+        </div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/70 via-black/45 to-black/85" />
+        <div className="absolute inset-0 hero-gradient opacity-60" />
         <div className="absolute inset-0 noise-overlay" />
       </div>
       <div className="relative z-10 text-center text-white px-4 max-w-4xl mx-auto">
         <div
-          className={`inline-block mb-6 px-4 py-1.5 border border-white/20 bg-white/5 text-xs tracking-[0.2em] uppercase transition-all duration-500 ${
+          className={`motion-reveal inline-block mb-6 px-4 py-1.5 border border-white/20 bg-white/5 text-xs tracking-[0.2em] uppercase transition-[opacity,transform] duration-300 ease-out ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
           }`}
         >
           Fitness Coach & Body Transformation Specialist
         </div>
         <h1
-          className={`text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-[0.04em] transition-all duration-500 ${
+          className={`motion-reveal text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-[0.04em] transition-[opacity,transform] duration-300 ease-out ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{ transitionDelay: "100ms" }}
@@ -57,7 +57,7 @@ export const HeroSection = () => {
           {siteConfig.tagline}
         </h1>
         <p
-          className={`text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto font-light tracking-wide transition-all duration-500 ${
+          className={`motion-reveal text-lg md:text-xl mb-10 text-gray-300 max-w-2xl mx-auto font-light tracking-wide transition-[opacity,transform] duration-300 ease-out ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{ transitionDelay: "200ms" }}
@@ -68,7 +68,7 @@ export const HeroSection = () => {
           </span>
         </p>
         <div
-          className={`flex flex-col sm:flex-row gap-4 justify-center transition-all duration-500 ${
+          className={`motion-reveal flex flex-col sm:flex-row gap-4 justify-center transition-[opacity,transform] duration-300 ease-out ${
             isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
           }`}
           style={{ transitionDelay: "300ms" }}
@@ -95,7 +95,7 @@ export const HeroSection = () => {
         </div>
       </div>
       <div
-        className={`absolute bottom-8 left-1/2 -translate-x-1/2 z-10 transition-all duration-500 ${
+        className={`motion-reveal absolute bottom-8 left-1/2 -translate-x-1/2 z-10 transition-[opacity,transform] duration-300 ease-out ${
           isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-4"
         }`}
         style={{ transitionDelay: "500ms" }}

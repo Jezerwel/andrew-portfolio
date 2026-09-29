@@ -34,18 +34,19 @@ export const Navigation = () => {
       }
     };
     window.addEventListener("scroll", handleScroll);
+    handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+      element.scrollIntoView({ behavior: "auto" });
     }
   };
 
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0, behavior: "auto" });
   };
 
   const handleInstagramClick = () => {
@@ -62,7 +63,8 @@ export const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+      aria-label="Main navigation"
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,padding] duration-200 ease-out ${
         isScrolled
           ? "bg-background/95 backdrop-blur-sm border-b border-border py-3"
           : "bg-transparent py-5"
@@ -72,7 +74,7 @@ export const Navigation = () => {
         <div className="flex items-center justify-between">
           <button
             onClick={scrollToTop}
-            className={`text-lg font-bold tracking-[0.1em] uppercase transition-colors ${
+            className={`text-lg font-bold tracking-[0.1em] uppercase transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4 ${
               isScrolled ? "text-foreground" : "text-white"
             }`}
           >
@@ -83,7 +85,7 @@ export const Navigation = () => {
               <button
                 key={item.id}
                 onClick={() => scrollToSection(item.id)}
-                className={`text-[11px] font-bold tracking-[0.15em] uppercase transition-colors hover:text-primary ${
+                className={`px-2 py-3 text-[11px] font-bold tracking-[0.15em] uppercase transition-colors hover:text-primary focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-2 ${
                   activeSection === item.id
                     ? "text-primary"
                     : isScrolled
@@ -116,7 +118,9 @@ export const Navigation = () => {
               size="icon"
               className="md:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMobileMenuOpen}
+              aria-controls="mobile-navigation"
             >
               {isMobileMenuOpen ? (
                 <svg
@@ -140,8 +144,7 @@ export const Navigation = () => {
             </Button>
           </div>
         </div>
-        {isMobileMenuOpen && (
-          <div className="md:hidden mt-4 py-4 border-t border-border/30">
+        <div id="mobile-navigation" hidden={!isMobileMenuOpen} className="md:hidden mt-4 py-4 border-t border-border/30">
             <div className="flex flex-col space-y-1">
               {navItems.map((item) => (
                 <button
@@ -150,7 +153,7 @@ export const Navigation = () => {
                     scrollToSection(item.id);
                     setIsMobileMenuOpen(false);
                   }}
-                  className={`text-left px-4 py-3 text-[11px] font-bold tracking-[0.15em] uppercase transition-colors ${
+                  className={`text-left px-4 py-3 text-[11px] font-bold tracking-[0.15em] uppercase transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-[-2px] ${
                     activeSection === item.id
                       ? "text-primary bg-primary/5 border-l-2 border-primary"
                       : isScrolled
@@ -174,8 +177,7 @@ export const Navigation = () => {
                 DM Me On Instagram
               </Button>
             </div>
-          </div>
-        )}
+        </div>
       </div>
     </nav>
   );
