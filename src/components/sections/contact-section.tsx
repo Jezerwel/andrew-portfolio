@@ -24,17 +24,19 @@ export const ContactSection = () => {
           <p className="text-sm text-muted-foreground mb-6">
             Tell me your goal and how many days you can train.
           </p>
-          <Button
-            asChild
-            size="lg"
-            className="w-full min-h-14 rounded-none text-sm sm:text-base px-4 font-bold tracking-[0.08em] uppercase border-2 border-primary"
-          >
-            <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer">
-              <Instagram aria-hidden="true" />
-              DM on Instagram
-              <ArrowUpRight aria-hidden="true" />
-            </a>
-          </Button>
+          <div data-magnetic>
+            <Button
+              asChild
+              size="lg"
+              className="w-full min-h-14 rounded-none text-sm sm:text-base px-4 font-bold tracking-[0.08em] uppercase border-2 border-primary"
+            >
+              <a href={siteConfig.social.instagram} target="_blank" rel="noopener noreferrer">
+                <Instagram aria-hidden="true" />
+                DM on Instagram
+                <ArrowUpRight aria-hidden="true" />
+              </a>
+            </Button>
+          </div>
         </div>
         <div className="mt-3 grid gap-3">
           {siteConfig.social.email && (

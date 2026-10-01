@@ -18,10 +18,11 @@ export const TestimonialsSection = () => {
       <div className="grid md:grid-cols-2 gap-6 relative z-10 max-w-4xl mx-auto">
         {clientTransformations.map((client) => (
           <div
+            data-reveal
             key={client.id}
-            className="relative p-6 border border-border bg-card/50 hover:border-primary/40 transition-colors duration-300 group"
+            className="relative p-6 border border-border bg-card/50"
           >
-            <div className="absolute top-0 left-0 h-full w-[3px] bg-primary/20 group-hover:bg-primary transition-colors duration-300" />
+            <div className="absolute top-0 left-0 h-full w-[3px] bg-primary" />
             <div className="mb-4">
               <svg
                 className="w-8 h-8 text-primary/30"

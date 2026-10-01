@@ -12,7 +12,7 @@ export const TransformationCard = ({ client }: TransformationCardProps) => {
   const [sliderPosition, setSliderPosition] = useState(50);
 
   return (
-    <div className="border border-border bg-card overflow-hidden group hover:border-primary/40 transition-colors duration-300">
+    <div data-reveal className="border border-border bg-card overflow-hidden">
       <div className="relative aspect-[4/5] overflow-hidden cursor-ew-resize select-none focus-within:ring-2 focus-within:ring-inset focus-within:ring-primary">
         <Image
           src={client.afterImage}
@@ -52,7 +52,7 @@ export const TransformationCard = ({ client }: TransformationCardProps) => {
         >
           <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 flex h-10 w-10 items-center justify-center border-2 border-primary bg-white">
             <svg className="h-4 w-4 text-primary" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l4-4 4 4m0 6l-4 4-4-4" />
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 8l-4 4 4 4m6-8 4 4-4 4" />
             </svg>
           </div>
         </div>

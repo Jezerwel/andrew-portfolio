@@ -18,6 +18,7 @@ export const ServicesSection = () => {
       <div className="grid md:grid-cols-2 gap-6 max-w-4xl mx-auto">
         {services.map((service) => (
           <div
+            data-reveal
             key={service.id}
             className="relative p-6 border border-border bg-card/50"
           >

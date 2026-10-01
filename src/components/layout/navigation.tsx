@@ -64,7 +64,7 @@ export const Navigation = () => {
   return (
     <nav
       aria-label="Main navigation"
-      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color,padding] duration-200 ease-out ${
+      className={`fixed top-0 left-0 right-0 z-50 transition-[background-color,border-color] duration-200 ease-out ${
         isScrolled
           ? "bg-background/95 backdrop-blur-sm border-b border-border py-3"
           : "bg-transparent py-5"

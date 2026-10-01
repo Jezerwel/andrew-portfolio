@@ -6,18 +6,21 @@ import { ServicesSection } from "@/components/sections/services-section";
 import { TransformationsSection } from "@/components/sections/transformations-section";
 import { TestimonialsSection } from "@/components/sections/testimonials-section";
 import { ContactSection } from "@/components/sections/contact-section";
+import { MotionPage } from "@/components/motion/motion-page";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
-      <Navigation />
-      <HeroSection />
-      <AboutSection />
-      <ServicesSection />
-      <TransformationsSection />
-      <TestimonialsSection />
-      <ContactSection />
-      <Footer />
-    </main>
+    <MotionPage>
+      <main className="min-h-screen">
+        <Navigation />
+        <HeroSection />
+        <AboutSection />
+        <ServicesSection />
+        <TransformationsSection />
+        <TestimonialsSection />
+        <ContactSection />
+        <Footer />
+      </main>
+    </MotionPage>
   );
 }
