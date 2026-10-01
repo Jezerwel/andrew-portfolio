@@ -1,5 +1,5 @@
 import { SectionWrapper } from "@/components/ui/section-wrapper";
-import { services } from "@/lib/data/services";
+import { services, trainingPrograms } from "@/lib/data/services";
 
 export const ServicesSection = () => {
   return (
@@ -19,11 +19,10 @@ export const ServicesSection = () => {
         {services.map((service) => (
           <div
             key={service.id}
-            className="relative p-6 border border-border bg-card/50 hover:border-primary/40 transition-colors duration-300 group"
+            className="relative p-6 border border-border bg-card/50"
           >
-            <div className="absolute top-0 left-0 w-full h-[2px] bg-primary scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
             <div className="flex items-start gap-4">
-              <div className="text-3xl font-bold text-primary/30 group-hover:text-primary transition-colors duration-300 tracking-tight">
+              <div className="text-3xl font-bold text-primary tracking-tight" aria-hidden="true">
                 {service.icon}
               </div>
               <div className="flex-1">
@@ -33,20 +32,49 @@ export const ServicesSection = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   {service.description}
                 </p>
-                <div className="flex flex-wrap gap-2">
+                <ul className="flex flex-wrap gap-2">
                   {service.features.map((feature) => (
-                    <span
+                    <li
                       key={feature}
-                      className="text-[10px] px-2 py-1 border border-border text-muted-foreground tracking-wide uppercase"
+                      className="text-xs px-2 py-1 border border-border text-muted-foreground tracking-wide"
                     >
                       {feature}
-                    </span>
+                    </li>
                   ))}
-                </div>
+                </ul>
               </div>
             </div>
           </div>
         ))}
+      </div>
+      <div className="max-w-4xl mx-auto mt-16" aria-labelledby="programs-heading">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between mb-6">
+          <h3 id="programs-heading" className="text-3xl font-bold uppercase tracking-tight">
+            Programs Offered
+          </h3>
+          <p className="text-sm text-muted-foreground">Training splits to fit your week.</p>
+        </div>
+        <div className="grid sm:grid-cols-3 border border-border bg-card/50">
+          {trainingPrograms.map((program) => (
+            <div key={program.days} className="p-6 border-t-2 border-t-primary border-b border-b-border last:border-b-0 sm:border-b-0 sm:border-r sm:border-r-border sm:last:border-r-0">
+              <h4 className="flex items-baseline gap-2 mb-6">
+                <span className="text-6xl font-bold text-primary tabular-nums">{program.days}x</span>
+                <span className="text-xs font-bold uppercase tracking-[0.12em] text-muted-foreground">/ week</span>
+              </h4>
+              <ul className="space-y-3 text-base font-semibold">
+                {program.splits.map((split) => (
+                  <li key={split} className="flex items-start gap-3">
+                    <span aria-hidden="true" className="text-primary">—</span>
+                    {split}
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+        <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+          FBEOD: full body every other day. PPL: push/pull/legs, paired with upper/lower (UL), torso/limbs (T/L), or anterior/posterior (A/P).
+        </p>
       </div>
     </SectionWrapper>
   );

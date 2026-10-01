@@ -30,8 +30,7 @@ export interface SiteConfig {
   url?: string;
   social: {
     instagram?: string;
-    facebook?: string;
+    tiktok?: string;
     email?: string;
-    phone?: string;
   };
 }

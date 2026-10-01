@@ -9,9 +9,8 @@ export const siteConfig: SiteConfig = {
   url: "https://builtbydrew.com",
   social: {
     instagram: "https://www.instagram.com/drewliftz1/",
-    facebook: "https://www.facebook.com/drewtzybtw",
+    tiktok: "https://www.tiktok.com/@drewliftz",
     email: "andrewvinzg@gmail.com",
-    phone: "09202634088",
   },
 };
 
@@ -23,15 +22,14 @@ export const structuredData = {
   name: siteConfig.name,
   description: siteConfig.description,
   url: siteConfig.url,
-  telephone: siteConfig.social.phone,
   email: siteConfig.social.email,
   founder: {
     "@type": "Person",
     name: "Andrew Vinz Ganon",
     jobTitle: "Fitness Coach & Nutrition Coach",
-    sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
+    sameAs: [siteConfig.social.instagram, siteConfig.social.tiktok],
   },
-  sameAs: [siteConfig.social.instagram, siteConfig.social.facebook],
+  sameAs: [siteConfig.social.instagram, siteConfig.social.tiktok],
   priceRange: "$$",
   serviceType: [
     "Personal Training",
