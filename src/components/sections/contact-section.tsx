@@ -61,7 +61,7 @@ export const ContactSection = () => {
               </svg>
               <div className="min-w-0 flex-1">
                 <p className="text-xs text-muted-foreground font-bold uppercase tracking-wide mb-1">TikTok</p>
-                <p className="text-base text-foreground">@drewliftz</p>
+                <p className="text-base text-foreground">@drewliftz1</p>
               </div>
               <ArrowUpRight aria-hidden="true" className="w-5 h-5 text-muted-foreground shrink-0" />
             </a>

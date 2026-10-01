@@ -9,7 +9,7 @@ export const siteConfig: SiteConfig = {
   url: "https://builtbydrew.com",
   social: {
     instagram: "https://www.instagram.com/drewliftz1/",
-    tiktok: "https://www.tiktok.com/@drewliftz",
+    tiktok: "https://www.tiktok.com/@drewliftz1",
     email: "andrewvinzg@gmail.com",
   },
 };

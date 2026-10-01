@@ -85,7 +85,7 @@ export const Footer = () => {
                     rel="noopener noreferrer"
                     className="inline-flex items-center min-h-11 text-foreground/70 hover:text-primary transition-colors duration-150 focus-visible:outline-2 focus-visible:outline-primary focus-visible:outline-offset-4"
                   >
-                    TikTok: @drewliftz
+                    TikTok: @drewliftz1
                   </a>
                 </li>
               )}
