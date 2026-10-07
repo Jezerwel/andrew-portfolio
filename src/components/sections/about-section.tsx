@@ -3,8 +3,8 @@ import { SectionWrapper } from "@/components/ui/section-wrapper";
 
 export const AboutSection = () => {
   const stats = [
-    { label: "Years", value: "3+" },
-    { label: "Clients", value: "50+" },
+    { label: "Years", value: "4+" },
+    { label: "Clients", value: "25+" },
     { label: "Gym Hours", value: "3,500+" },
   ];
 

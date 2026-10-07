@@ -5,7 +5,7 @@ import { clientTransformations } from "@/lib/data/clients";
 export const TransformationsSection = () => {
   return (
     <SectionWrapper id="transformations" className="bg-muted/20 relative overflow-hidden pattern-stripes">
-      <div className="text-center mb-16 relative z-10">
+      <div className="relative z-10 mx-auto mb-12 max-w-5xl text-center">
         <div className="inline-block mb-4 px-3 py-1 border border-primary/40 text-[10px] tracking-[0.2em] uppercase text-primary font-bold">
           Proof
         </div>
@@ -16,7 +16,7 @@ export const TransformationsSection = () => {
           Stage-ready physiques. Massive fat loss. Real people. Real results.
         </p>
       </div>
-      <div className="grid md:grid-cols-2 gap-6 relative z-10">
+      <div className="relative z-10 grid gap-6 md:grid-cols-2 xl:grid-cols-3">
         {clientTransformations.map((client) => (
           <TransformationCard key={client.id} client={client} />
         ))}

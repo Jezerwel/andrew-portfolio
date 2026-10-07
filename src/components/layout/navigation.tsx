@@ -16,6 +16,7 @@ export const Navigation = () => {
       setIsMobileMenuOpen(false);
       const sections = [
         "about",
+        "programs",
         "services",
         "transformations",
         "testimonials",
@@ -56,6 +57,7 @@ export const Navigation = () => {
   const navItems = [
     { id: "about", label: "About" },
     { id: "services", label: "Services" },
+    { id: "programs", label: "Programs Offered" },
     { id: "transformations", label: "Results" },
     { id: "testimonials", label: "Feedback" },
     { id: "contact", label: "Contact" },
@@ -80,7 +82,7 @@ export const Navigation = () => {
           >
             {siteConfig.name}
           </button>
-          <div className="hidden md:flex items-center gap-6">
+          <div className="hidden lg:flex items-center gap-6">
             {navItems.map((item) => (
               <button
                 key={item.id}
@@ -102,7 +104,7 @@ export const Navigation = () => {
             <Button
               onClick={handleInstagramClick}
               size="sm"
-              className={`hidden md:flex text-[10px] font-bold tracking-[0.1em] uppercase px-4 ${
+              className={`hidden lg:flex text-[10px] font-bold tracking-[0.1em] uppercase px-4 ${
                 !isScrolled
                   ? "bg-white/10 hover:bg-white/20 text-white border border-white/30"
                   : "border border-primary"
@@ -116,7 +118,7 @@ export const Navigation = () => {
             <Button
               variant="ghost"
               size="icon"
-              className="md:hidden"
+              className="lg:hidden"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMobileMenuOpen}
@@ -144,7 +146,7 @@ export const Navigation = () => {
             </Button>
           </div>
         </div>
-        <div id="mobile-navigation" hidden={!isMobileMenuOpen} className="md:hidden mt-4 py-4 border-t border-border/30">
+        <div id="mobile-navigation" hidden={!isMobileMenuOpen} className="lg:hidden mt-4 py-4 border-t border-border/30">
             <div className="flex flex-col space-y-1">
               {navItems.map((item) => (
                 <button

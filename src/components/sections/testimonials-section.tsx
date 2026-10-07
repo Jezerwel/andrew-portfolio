@@ -16,7 +16,7 @@ export const TestimonialsSection = () => {
         </p>
       </div>
       <div className="grid md:grid-cols-2 gap-6 relative z-10 max-w-4xl mx-auto">
-        {clientTransformations.map((client) => (
+        {clientTransformations.filter((client) => client.testimonial).map((client) => (
           <div
             data-reveal
             key={client.id}

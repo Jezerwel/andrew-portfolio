@@ -1,17 +1,17 @@
 export interface ClientTransformation {
   id: string;
   name: string;
-  beforeImage: string;
+  beforeImage?: string;
   afterImage: string;
-  timeframe: string;
+  timeframe?: string;
   stats: {
     weightChange?: string;
     muscleGain?: string;
     bodyFatLoss?: string;
   };
   goal: string;
-  testimonial: string;
-  program: string;
+  testimonial?: string;
+  program?: string;
 }
 
 export interface Service {

@@ -1,6 +1,7 @@
 import type { Service } from "@/lib/types";
 
 export const trainingPrograms = [
+  { days: 2, splits: ["Custom split"] },
   { days: 3, splits: ["FBEOD"] },
   { days: 4, splits: ["Upper/Lower", "Torso/Limbs", "Anterior/Posterior"] },
   { days: 5, splits: ["PPL UL", "PPL T/L", "PPL A/P"] },

@@ -3,7 +3,7 @@ import type { ClientTransformation } from "@/lib/types";
 export const clientTransformations: ClientTransformation[] = [
   {
     id: "erw",
-    name: "Erwin Chavez",
+    name: "Erwin",
     beforeImage: "/clients/erwbefore.jpg",
     afterImage: "/clients/erwafter.jpg",
     timeframe: "12 weeks",
@@ -18,7 +18,7 @@ export const clientTransformations: ClientTransformation[] = [
   },
   {
     id: "fern",
-    name: "Jan Fernan Dela Vega",
+    name: "Fernan",
     beforeImage: "/clients/fernbefore.jpeg",
     afterImage: "/clients/fernafter.jpeg",
     timeframe: "16 weeks",
@@ -32,7 +32,7 @@ export const clientTransformations: ClientTransformation[] = [
   },
   {
     id: "harr",
-    name: "Harri Gallenero",
+    name: "Harri",
     beforeImage: "/clients/harrbefore.jpg",
     afterImage: "/clients/harrafter.jpg",
     timeframe: "10 weeks",
@@ -57,5 +57,25 @@ export const clientTransformations: ClientTransformation[] = [
     testimonial:
       "Life-changing transformation. Could not have done it without Andrew!",
     program: "Training + Nutrition Plan",
+  },
+  {
+    id: "zaki",
+    name: "Zaki",
+    beforeImage: "/clients/zakibefore.jpg",
+    afterImage: "/clients/zakiafter.jpg",
+    stats: {
+      weightChange: "-5 kg",
+    },
+    goal: "Weight Loss",
+    program: "Training + Nutrition Plan",
+  },
+  {
+    id: "jean",
+    name: "Jean, 50",
+    afterImage: "/clients/jean-before-after.jpg",
+    stats: {
+      weightChange: "+2 kg",
+    },
+    goal: "Leaner Look",
   },
 ];
